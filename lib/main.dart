@@ -60,10 +60,13 @@ class _HomePageState extends State<HomePage> {
             ),
             Text(
               "Total Balance",
-              style: TextStyle(fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold),
             ),
             SizedBox(
-              height: 8.0,
+              height: 13.0,
             ),
             Text(
               "1632.55 \$",
@@ -72,7 +75,7 @@ class _HomePageState extends State<HomePage> {
                   fontSize: 45.0,
                   fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 30),
             Expanded(
               child: Container(
                 width: double.infinity,
@@ -101,6 +104,69 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         ListTile(
                           Icons.shopping_cart,
+                          Colors.blue,
+                          "Shopping",
+                          "Buying new cloth",
+                          13.66,
+                        ),
+                        ListTile(
+                          Icons.shopping_cart,
+                          Colors.pink,
+                          "Shopping",
+                          "Buying new cloth",
+                          13.66,
+                        ),
+                        ListTile(
+                          Icons.shopping_cart,
+                          Colors.green,
+                          "Shopping",
+                          "Buying new cloth",
+                          13.66,
+                        ),
+                        ListTile(
+                          Icons.shopping_cart,
+                          Colors.pink,
+                          "Shopping",
+                          "Buying new cloth",
+                          13.66,
+                        ),
+                        ListTile(
+                          Icons.shopping_cart,
+                          Colors.orange,
+                          "Shopping",
+                          "Buying new cloth",
+                          13.66,
+                        ),
+                        ListTile(
+                          Icons.shopping_cart,
+                          Colors.pink,
+                          "Shopping",
+                          "Buying new cloth",
+                          13.66,
+                        ),
+                        ListTile(
+                          Icons.shopping_cart,
+                          Colors.indigo,
+                          "Shopping",
+                          "Buying new cloth",
+                          13.66,
+                        ),
+                        ListTile(
+                          Icons.shopping_cart,
+                          Colors.pink,
+                          "Shopping",
+                          "Buying new cloth",
+                          13.66,
+                        ),
+                        ListTile(
+                          Icons.shopping_cart,
+                          Colors.pink,
+                          "Shopping",
+                          "Buying new cloth",
+                          13.66,
+                        ),
+                        ListTile(
+                          Icons.shopping_cart,
                           Colors.pink,
                           "Shopping",
                           "Buying new cloth",
@@ -120,27 +186,65 @@ class _HomePageState extends State<HomePage> {
 
   Widget ListTile(
       IconData icon, Color color, String type, String title, double value) {
-    return Container(
-      padding: EdgeInsets.all(8.0),
-      decoration: BoxDecoration(
-        color: tileColor,
-        borderRadius: BorderRadius.circular(8.0),
-      ),
-      child: Row(
-        children: [
-          Container(
-            width: 60,
-            height: 60,
-            decoration: BoxDecoration(
-                color: Color(0xFFBCBEDC),
-                borderRadius: BorderRadius.circular(8.0)),
-            child: Icon(
-              icon,
-              size: 32.0,
-              color: color,
+    return InkWell(
+      onTap: () {},
+      child: Container(
+        margin: EdgeInsets.only(bottom: 16.0),
+        padding: EdgeInsets.all(8.0),
+        decoration: BoxDecoration(
+          color: tileColor,
+          borderRadius: BorderRadius.circular(8.0),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+              width: 60,
+              height: 60,
+              decoration: BoxDecoration(
+                  color: Color(0xFFBCBEDC),
+                  borderRadius: BorderRadius.circular(8.0)),
+              child: Icon(
+                icon,
+                size: 32.0,
+                color: color,
+              ),
             ),
-          ),
-        ],
+            SizedBox(
+              width: 12.0,
+            ),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    type,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 22.0,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(height: 8.0),
+                  Text(
+                    title,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16.0,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Text(
+              "$value \$",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 22.0,
+                  fontWeight: FontWeight.bold),
+            ),
+          ],
+        ),
       ),
     );
   }
