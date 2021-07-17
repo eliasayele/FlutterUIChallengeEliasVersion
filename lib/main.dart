@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:uichallengesflutter/netflix/netflix_home.dart';
 import 'package:uichallengesflutter/socialmedia/main.dart';
 import 'package:uichallengesflutter/walletapp/walletapp.dart';
 
@@ -57,6 +58,18 @@ class ListChallenges extends StatelessWidget {
                       },
                       icon: Icon(Icons.face),
                       label: Text("social media app")),
+                ),
+                ListTile(
+                  title: TextButton.icon(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => NetFlixHome()),
+                        );
+                      },
+                      icon: Icon(Icons.play_circle_filled_rounded),
+                      label: Text("netflix app")),
                 ),
               ],
             ),
