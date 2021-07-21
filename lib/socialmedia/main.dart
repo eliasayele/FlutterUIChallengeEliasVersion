@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:uichallengesflutter/socialmedia/profile.dart';
 
 const iconsPath = 'assets/icons/';
@@ -19,6 +18,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     Profile(Colors.white70),
     Profile(Colors.white70),
   ];
+
   void onSelected(int index) {
     setState(() {
       _selectedIndex = index;

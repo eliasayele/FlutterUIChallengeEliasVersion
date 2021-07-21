@@ -20,6 +20,15 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   pixel_perfect: ^1.1.0
+  introduction_screen: ^2.1.0
+  http: ^0.13.3
+  glassmorphism: ^2.0.1
+  cached_network_image: ^3.1.0
+  sleek_circular_slider: ^2.0.1
+  audioplayers: ^0.19.1
+  firebase_auth: ^3.0.1
+  firebase_core: ^1.4.0
+  google_sign_in: ^5.0.5
 
 dev_dependencies:
   flutter_test:
@@ -40,6 +49,8 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
+    - assets/fitness/
+    - assets/taskapp/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
